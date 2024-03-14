@@ -1,7 +1,3 @@
-function getStudentsByLocation(students, city) {
-  const studentsInCity = students.filter((student) => student.location === city);
-
-  return studentsInCity;
+export default function getStudentsByLocation(students, city) {
+  return students.filter((student) => student.location.localeCompare(city) === 0);
 }
-
-export default getStudentsByLocation;
